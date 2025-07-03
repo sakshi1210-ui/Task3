@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.cell.x {
+  color: #ff3860;
+  text-shadow: 0 0 10px #ff3860;
+}
+
+.cell.o {
+  color: #00d1b2;
+  text-shadow: 0 0 10px #00d1b2;
+}
+
+button#restartBtn {
+  margin-top: 25px;
+  padding: 10px 30px;
+  background: #00f7ff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f7ff;
+  transition: 0.3s;
+}
+
+button#restartBtn:hover {
+  background: #00d1b2;
+  box-shadow: 0 0 15px #00d1b2;
+  transform: scale(1.1);
+}
